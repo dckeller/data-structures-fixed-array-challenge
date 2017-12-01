@@ -15,7 +15,7 @@ class FixedArray
 		if index > ((@array.length) - 1)
 			puts "OutOfBoundsException"
 		else
-			@array.delete((index) - 1) 
+			@array.delete_at(index)
 			@array.insert(index, element)
 			@array
 		end 
@@ -26,3 +26,6 @@ end
 new_array = FixedArray.new(5)
 p new_array
 p new_array.get(4)
+new_array.get(5)
+p new_array.set(3, "Four")
+new_array.set(5, "Six")
