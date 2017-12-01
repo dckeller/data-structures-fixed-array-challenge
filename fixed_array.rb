@@ -6,23 +6,23 @@ class FixedArray
 	end
 
 	def get(index)
-		if index > array.length -1
+		if index > ((@array.length) -1)
 			puts "OutOfBoundsException"
-		else 
-			array[index]
 		end 
 	end
 
 	def set(index, element)
-		if index > array.length - 1
+		if index > ((@array.length) - 1)
 			puts "OutOfBoundsException"
-		else 
-			array.insert(index, element)
-			array
+		else
+			@array.delete((index) - 1) 
+			@array.insert(index, element)
+			@array
 		end 
 	end  
 
 end
 
 new_array = FixedArray.new(5)
-puts new_array
+p new_array
+p new_array.get(4)
